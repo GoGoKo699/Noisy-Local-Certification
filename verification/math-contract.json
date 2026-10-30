@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 2,
+      "source_sha256": "72a7cc1331b0b7aa237332954b04b07875f6fbd84f208ab779b9961cd448fdf7",
+      "expected_text": "\n  \n    N\n    \n      \n        opt\n      \n    \n  \n  =\n  \n    [\n  \n  (\n  1\n  −\n  q\n  \n    )\n    2\n  \n  +\n  \n    q\n    2\n  \n  \n    \n      ]\n    \n    \n      −\n      n\n      +\n      o\n      (\n      n\n      )\n    \n  \n  .\n"
+    },
+    {
+      "path": "science/model-and-results.md",
+      "index": 28,
+      "source_sha256": "4ea26c8d20897251f7024877c0134c3f13446d1be17204b3115c55d1e4b9c193",
+      "expected_text": "\n  \n    δ\n    n\n  \n  (\n  q\n  )\n  =\n  C\n  \n    [\n    n\n    \n      b\n      \n        n\n        \n          /\n        \n        2\n      \n    \n    +\n    \n      n\n      2\n    \n    \n      a\n      n\n    \n    ]\n  \n  .\n"
+    },
+    {
+      "path": "science/model-and-results.md",
+      "index": 36,
+      "source_sha256": "7e98a02a1a2314dd3f6523c1f40eb73f149d533be2430c377e06930bb423412e",
+      "expected_text": "\n  \n    \n      c\n      \n        q\n        ,\n        α\n      \n    \n    \n      \n        n\n        2\n      \n      \n        b\n        n\n      \n    \n  \n  ≤\n  \n    N\n    \n      \n        opt\n      \n    \n  \n  (\n  ψ\n  ,\n  q\n  ,\n  α\n  )\n  ≤\n  \n    C\n    \n      q\n      ,\n      α\n    \n  \n  \n    b\n    \n      −\n      n\n    \n  \n  .\n"
+    },
+    {
+      "path": "science/model-and-results.md",
+      "index": 37,
+      "source_sha256": "e35b980b50624653552b278fbb7998b2e4b60cd20caaa1b60b294a47c45c3cd2",
+      "expected_text": "\n  \n    1\n    n\n  \n  log\n  ⁡\n  \n    N\n    \n      \n        opt\n      \n    \n  \n  (\n  ψ\n  ,\n  q\n  ,\n  α\n  )\n  ⟶\n  −\n  log\n  ⁡\n  b\n"
+    },
+    {
+      "path": "science/uniform-concentration.md",
+      "index": 18,
+      "source_sha256": "5dcf8636667a5b0fe76daef0c1eaf882b27bbd98cd3508720726bbc4116b047f",
+      "expected_text": "\n  \n    \n      \n        (1)\n      \n      \n        \n          \n            \n              \n                \n                  \n                \n                \n                  δ\n                  n\n                \n                (\n                q\n                )\n                =\n                \n                  C\n                  \n                    \n                      unif\n                    \n                  \n                \n                \n                  [\n                  n\n                  \n                    \n                  \n                  \n                    b\n                    \n                      n\n                      \n                        /\n                      \n                      2\n                    \n                  \n                  +\n                  \n                    n\n                    2\n                  \n                  \n                    a\n                    n\n                  \n                  ]\n                \n                .\n                \n                  \n                \n              \n            \n          \n        \n      \n    \n  \n"
+    },
+    {
+      "path": "science/uniform-concentration.md",
+      "index": 21,
+      "source_sha256": "b6a649d793ac658fb397b0ecf529c5b99f6ad65fca8f2617abfd78e604f210b5",
+      "expected_text": "\n  \n    \n      \n        (2)\n      \n      \n        \n          \n            \n              \n                \n                  \n                \n                \n                  sup\n                  \n                    u\n                    ∈\n                    (\n                    \n                      S\n                      2\n                    \n                    \n                      )\n                      n\n                    \n                  \n                \n                \n                  |\n                  d\n                  ⟨\n                  ψ\n                  |\n                  \n                    E\n                    s\n                  \n                  (\n                  u\n                  )\n                  |\n                  ψ\n                  ⟩\n                  −\n                  1\n                  |\n                \n                ≤\n                \n                  δ\n                  n\n                \n                (\n                q\n                )\n                .\n                \n                  \n                \n              \n            \n          \n        \n      \n    \n  \n"
+    },
+    {
+      "path": "science/circuit-targets.md",
+      "index": 9,
+      "source_sha256": "611af71ebb74bc761801d288a8fc4e5c22096582e7888874ceea0caedead6d4a",
+      "expected_text": "\n  \n    \n      \n        (1)\n      \n      \n        ∥\n        \n          M\n          t\n        \n        (\n        ν\n        )\n        −\n        \n          M\n          t\n        \n        (\n        \n          Haar\n        \n        )\n        \n          ∥\n          1\n        \n        ≤\n        ϵ\n        ,\n        \n          \n        \n        \n          M\n          t\n        \n        (\n        \n          Haar\n        \n        )\n        =\n        \n          \n            Π\n            \n              \n                sym\n              \n            \n            \n              (\n              t\n              )\n            \n          \n          \n            \n              (\n            \n            \n              \n                d\n                +\n                t\n                −\n                1\n              \n              t\n            \n            \n              )\n            \n          \n        \n        .\n      \n    \n  \n"
+    },
+    {
+      "path": "science/circuit-targets.md",
+      "index": 25,
+      "source_sha256": "beea616bdee9ca01c4d1f7bef52bedcf34995f1cdc9ee1e617ac15037e8fc425",
+      "expected_text": "\n  \n    \n      \n        (4)\n      \n      \n        \n          \n            c\n            q\n          \n          \n            n\n            2\n          \n        \n        \n          \n        \n        \n          b\n          \n            −\n            n\n          \n        \n         \n        ≤\n         \n        \n          N\n          ∗\n        \n        (\n        ψ\n        ,\n        q\n        )\n         \n        ≤\n         \n        \n          C\n          q\n        \n        \n          b\n          \n            −\n            n\n          \n        \n        .\n      \n    \n  \n"
+    },
+    {
+      "path": "science/circuit-targets.md",
+      "index": 28,
+      "source_sha256": "00aa211e67b9fb55b35b43ec7b7e21ce9d7e16c8eda91e7dee149d2dc31fa15d",
+      "expected_text": "\n  \n    \n      \n        (5)\n      \n      \n        κ\n        =\n        32\n        ,\n        \n          \n        \n        K\n        =\n        160.\n      \n    \n  \n"
+    },
+    {
+      "path": "science/fidelity-certification.md",
+      "index": 76,
+      "source_sha256": "449f11f9c301d83b0c492964cc306530492d9a19ddc7b4170f854b56cf31c4f5",
+      "expected_text": "\n  \n    \n      \n        (13)\n      \n      \n        N\n        ≥\n        \n          ⌈\n          \n            \n              18\n              \n                \n              \n              (\n              1\n              −\n              2\n              q\n              \n                )\n                \n                  −\n                  2\n                  n\n                \n              \n            \n            \n              G\n              2\n            \n          \n          log\n          ⁡\n          \n            1\n            α\n          \n          ⌉\n        \n      \n    \n  \n"
+    },
+    {
+      "path": "science/fidelity-certification.md",
+      "index": 82,
+      "source_sha256": "cec18989163c2c400a52dbac4438c3597d305325c1f9af21bbf8adbe750d63f0",
+      "expected_text": "\n  Pr\n  [\n  incorrect decision\n  ]\n  ≤\n  exp\n  \n    \n  \n  \n    [\n    −\n    \n      \n        N\n        \n          G\n          2\n        \n      \n      \n        18\n        \n          s\n          \n            −\n            2\n            n\n          \n        \n      \n    \n    ]\n  \n  .\n"
+    },
+    {
+      "path": "science/acquisition-and-control.md",
+      "index": 48,
+      "source_sha256": "d0eb9ab857770771f977e05f49f9ae8064abccc265e869c416c1cafe86c4ab46",
+      "expected_text": "\n  \n    \n      \n        (13)\n      \n      \n        h\n        (\n        q\n        )\n        =\n        \n          H\n          4\n        \n        (\n        p\n        )\n        =\n        −\n        \n          ∑\n          \n            ℓ\n            =\n            0\n          \n          3\n        \n        \n          p\n          ℓ\n        \n        \n          log\n          2\n        \n        ⁡\n        \n          p\n          ℓ\n        \n        .\n      \n    \n  \n"
+    }
+  ]
+}

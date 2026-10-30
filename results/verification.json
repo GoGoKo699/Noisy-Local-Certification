@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-30T14:56:43.335258+00:00",
+  "checked_at_utc": "2026-10-30T15:39:05.500341+00:00",
   "environment": {
     "python": "3.12.14",
     "numpy": "2.3.5"
@@ -359,27 +359,36 @@
     }
   },
   "input_sha256": {
-    "README.md": "21a38d43845defc0664bd95e42782eb85228d359a036a7a53ae7d02321b42a98",
+    ".github/workflows/verify.yml": "9b772651d3d4bd96e7da22d764c419efbde8d643c563061618b9b9272e407b0b",
+    "README.md": "8e796eb925ddd9b261d0636e3028c4452d22458079c3db82bfe78276477e8dfa",
     "code/README.md": "0314042ab355d821384a096ad2ad3bf47ba508d197b7471378f1db8551d85d67",
     "code/core_checks.py": "1bec643e4d08448f1840779bde2c5e5d56970e70aede7d2dd7c4b57fabf5640f",
     "code/fidelity_checks.py": "2e257427ab40e9776ae53a08fab0b3bd280329ae0b8ff0ee2bdd9369d144cdbc",
-    "code/verify.py": "c4de71801b87b42789ccbf4b8733e9975fd90ec2f7880033171ca7b7df1ab275",
+    "code/verify.py": "ac47d3aa0912dfe5de00d8f9285f14076d51f8ee2c71ea27f1d2478a568fd5d0",
+    "learning/MILESTONES.md": "241f717d8253f6e0cb186329064609c68bc60f32f5d685a24aa8607aadd98d44",
+    "learning/README.md": "f4701f18b138e62ca4e9186f2922149e8173a364e0acea896073a634b94859d5",
+    "learning/WATROUS_BRIDGE.md": "df15f13597cf143c6ade911bcd33498a5b0b0c4a379010933d45dca94ee04d97",
+    "llms.txt": "9e4d909b722128c5c104dd4e46f21ff13b8b6c8359b8b1f649ea99a2e0f575fb",
     "references/REFERENCES.md": "0944055cbfa5bd20f1b6ad8cc70a0e172f667897f01708fcbdf6822edebe05e1",
     "references/RELATED_WORK.md": "90029fdc405ddfa9d89ec93bb9193b070d9b59eafaf4a3e570674947ab8a7e8c",
     "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
     "science/README.md": "a1ff7f49e5544c238322bb088acc922c53a291b81dd09da6cf9f6ef9c375d9e9",
-    "science/acquisition-and-control.md": "f1c6f0492947ad8e1ead2485a90ed7c3180e5fa720698bbf50d73db04298db07",
-    "science/binary-sample-law.md": "5fbf3faf9e30990fab1454b418af141150d8645ca169f28b3468a4d2b46479f9",
-    "science/circuit-targets.md": "93e3e0d6052ef2249a9f27b77bb2652b664601a52fbaf5adedc2a7e9dc4cf93d",
-    "science/fidelity-certification.md": "185d7bef2e2e6a13c53778aa999071b91621a75052b6b94b8f4d1f0c87ae7ed2",
-    "science/model-and-results.md": "323c7ba3753cf1a5cea59ab9f33150e2dc0020c24565770ba771815b45e93a37",
-    "science/uniform-concentration.md": "feef93775b4c43b77b3ca384b84021e5566a516cc334990e3ce7baf879eccf31"
+    "science/acquisition-and-control.md": "d26f29d13def2e00b02dbb2a345946dcb75f6104fc056ebf4cfc770cad161c46",
+    "science/binary-sample-law.md": "f5a7dfc99643da1c0001f0a716ebd78c7e29f8ff02464eea0408101cc90710e5",
+    "science/circuit-targets.md": "fdf63f595a2310b363b806ad68e2082a0f1c04d65ab5707ab6fb5a9864f6a82c",
+    "science/fidelity-certification.md": "4903b9b43885a0678d740deebc447dcd0680fe550a1175d609cca156120eed77",
+    "science/model-and-results.md": "1a43c272307f0691c670a6b0e8e7478d3a03bc47845e75180f0ca881c6ae3b78",
+    "science/uniform-concentration.md": "c30dd3e70d72ba208a12e5e982462d08adef7827f39029970cf26fc7e99ad0b9",
+    "verification/README.md": "16d7a59335ffbe4e59984c5d90e347e2890d0c485a33b4d07513a774b775ccd9",
+    "verification/hosted/capture_hosted_math.cjs": "49182eaf354e86f685a4976814d672de5d7329a2d9e42f62a5227e2bc07c2d18",
+    "verification/hosted/check_rendered_math.py": "edbc2d72af94e96b78166d74b66fcea150134f2f3ebaaea121e9057768e1dbfe",
+    "verification/math-contract.json": "62b04c23c114a07e766e3be0fc4a07cd2e098c867c76b8254a90886053b8354f"
   },
   "scope": "Finite formula, instrument and score checks. Analytical proofs establish the asymptotic claims.",
   "status": "pass",
   "navigation": {
     "status": "pass",
-    "relative_file_links_checked": 60,
+    "relative_file_links_checked": 163,
     "scope": "Relative file destinations; hosted anchor rendering is reviewed separately."
   }
 }

@@ -11,7 +11,20 @@ Scientific question: determine the copy cost of testing a fully known generic pu
 - Approximate state designs, polynomial preparation cost and charged inverse control: science/circuit-targets.md
 - Detector versus acquisition noise, separable/global measurements and paid redundancy: science/acquisition-and-control.md
 - Prior work and inherited ingredients: references/RELATED_WORK.md and references/REFERENCES.md
-- Reproduction commands, numerical scope and input hashes: code/README.md and results/verification.json
+- Conceptual story from one imperfect bit to the complete result: learning/README.md
+- Shared 30-milestone map, with 12 foundation and 18 narrative milestones: learning/MILESTONES.md
+- Single selected educational anchor, Watrous2018, and notation/source bridge: learning/WATROUS_BRIDGE.md
+- Reproduction commands and actual hosted-rendering procedure: verification/README.md
+- Numerical scope, implementation and input hashes: code/README.md and results/verification.json
+
+## Routes by purpose
+
+Story: README.md → learning/README.md → science/model-and-results.md.
+Study: learning/MILESTONES.md with learning/WATROUS_BRIDGE.md; read the linked canonical science alongside the chosen Watrous sections.
+Theorem review: science/model-and-results.md → science/uniform-concentration.md → science/binary-sample-law.md, then the task-specific fidelity/design/control chapter.
+Reproduction: verification/README.md → code/README.md → results/verification.json; hosted source comparison and actual screenshot review are separate from numerical proof checks.
+
+The map is learner-independent. Private coaching instructions, attempts and progress are not part of the public scientific record.
 
 ## Essential distinctions
 
