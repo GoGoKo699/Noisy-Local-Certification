@@ -33,56 +33,56 @@ Additional selections enter only with their corresponding extensions:
 
 | In Watrous | In this repository |
 |---|---|
-| A unit vector $u$ and its pure-state operator $uu^*$ | The target vector is $\lvert\psi\rangle$; $\psi$ also denotes $\lvert\psi\rangle\langle\psi\rvert$ inside a trace. |
-| The adjoint $A^*$ and identity $1_{\mathcal X}$ | $A^\dagger$ or $A^*$, and $I$. The input space is $(\mathbb C^2)^{\otimes n}$ with dimension $d=2^n$. |
-| A measurement written as a function $\mu(y)$ | A POVM effect $M_y$, or a branch effect $H_i(t)$. Its probability is $\operatorname{tr}(\rho M_y)$. |
-| The trace norm $\lVert A\rVert_1$ and spectral norm $\lVert A\rVert$ | $\lVert A\rVert_1$ and $\lVert A\rVert_\infty$. The trace-norm design error is unhalved. |
-| Fidelity $F(\rho,\sigma)=\lVert\sqrt\rho\sqrt\sigma\rVert_1$ | Target fidelity $F_\psi(\rho)=\langle\psi\rvert\rho\lvert\psi\rangle=F(\psi,\rho)^2$. A promise on one convention must be converted before using the other. |
-| Base-2 $\log$ in entropy and relative entropy | The binary proofs use natural logarithms: $D_{\mathrm{nat}}=(\ln 2)D_{\mathrm{bits}}$. The acquisition entropy $H_4$ explicitly uses bits. |
-| A tensor-power index in the symmetric-subspace formulas | Use $t$ for moment order here. It is distinct from the number $n$ of physical qubits and the copy budget $N$. |
+| A unit vector $`u`$ and its pure-state operator $`uu^*`$ | The target vector is $`\lvert\psi\rangle`$; $`\psi`$ also denotes $`\lvert\psi\rangle\langle\psi\rvert`$ inside a trace. |
+| The adjoint $`A^*`$ and identity $`1_{\mathcal X}`$ | $`A^\dagger`$ or $`A^*`$, and $`I`$. The input space is $`(\mathbb C^2)^{\otimes n}`$ with dimension $`d=2^n`$. |
+| A measurement written as a function $`\mu(y)`$ | A POVM effect $`M_y`$, or a branch effect $`H_i(t)`$. Its probability is $`\mathrm{tr}(\rho M_y)`$. |
+| The trace norm $`\lVert A\rVert_1`$ and spectral norm $`\lVert A\rVert`$ | $`\lVert A\rVert_1`$ and $`\lVert A\rVert_\infty`$. The trace-norm design error is unhalved. |
+| Fidelity $`F(\rho,\sigma)=\lVert\sqrt\rho\sqrt\sigma\rVert_1`$ | Target fidelity $`F_\psi(\rho)=\langle\psi\rvert\rho\lvert\psi\rangle=F(\psi,\rho)^2`$. A promise on one convention must be converted before using the other. |
+| Base-2 $`\log`$ in entropy and relative entropy | The binary proofs use natural logarithms: $`D_{\mathrm{nat}}=(\ln 2)D_{\mathrm{bits}}`$. The acquisition entropy $`H_4`$ explicitly uses bits. |
+| A tensor-power index in the symmetric-subspace formulas | Use $`t`$ for moment order here. It is distinct from the number $`n`$ of physical qubits and the copy budget $`N`$. |
 
-For classical distributions, total variation is one half of their $\ell_1$ distance. Likewise, the usual operational trace distance between states is one half of their trace-norm difference. The approximation parameter in [circuit targets, §1](../science/circuit-targets.md#1-moment-convention-and-result) bounds the full trace norm, without that factor.
+For classical distributions, total variation is one half of their $`\ell_1`$ distance. Likewise, the usual operational trace distance between states is one half of their trace-norm difference. The approximation parameter in [circuit targets, §1](../science/circuit-targets.md#1-moment-convention-and-result) bounds the full trace norm, without that factor.
 
-There is also a useful normalization distinction. A physical POVM effect need not have trace one. When comparing it with the maximally mixed state $\tau=I/d$, its likelihood ratio is
+There is also a useful normalization distinction. A physical POVM effect need not have trace one. When comparing it with the maximally mixed state $`\tau=I/d`$, its likelihood ratio is
 
-$$
-\frac{\operatorname{tr}(\psi M)}
-     {\operatorname{tr}(\tau M)}
-=d\,\operatorname{tr}\!\left(\psi\,\frac{M}{\operatorname{tr}M}\right),
-\qquad \operatorname{tr}M>0.
-$$
+```math
+\frac{\mathrm{tr}(\psi M)}
+     {\mathrm{tr}(\tau M)}
+=d\,\mathrm{tr}\!\left(\psi\,\frac{M}{\mathrm{tr}M}\right),
+\qquad \mathrm{tr}M>0.
+```
 
 The normalized operator is a tool for the likelihood calculation; it need not be an outcome of the original POVM.
 
 ## A first translation: one imperfect report
 
-Measure a qubit in the computational basis and flip its ideal outcome with probability $q$. The effect for a reported zero is
+Measure a qubit in the computational basis and flip its ideal outcome with probability $`q`$. The effect for a reported zero is
 
-$$
+```math
 F_0=(1-q)\lvert0\rangle\langle0\rvert
        +q\lvert1\rangle\langle1\rvert
     =\frac{I+(1-2q)Z}{2}.
-$$
+```
 
-At $q=0.1$, this effect has eigenvalues $0.9$ and $0.1$. The report-zero probability is $0.9$ on the target $\lvert0\rangle$ and $0.5$ on $I/2$. Its purity is $0.9^2+0.1^2=0.82$.
+At $`q=0.1`$, this effect has eigenvalues $`0.9`$ and $`0.1`$. The report-zero probability is $`0.9`$ on the target $`\lvert0\rangle`$ and $`0.5`$ on $`I/2`$. Its purity is $`0.9^2+0.1^2=0.82`$.
 
-For a specified branch measuring all $n$ qubits, the product effect therefore has purity $b^n$, where $b=(1-q)^2+q^2$, and largest eigenvalue $(1-q)^n$. These two quantities enter the concentration proof. The unknown input can be entangled: it is the **branch effect**, not the state or its observed reports, that factorizes. For adaptive measurements, fixing the reported branch fixes its chosen axes.
+For a specified branch measuring all $`n`$ qubits, the product effect therefore has purity $`b^n`$, where $`b=(1-q)^2+q^2`$, and largest eigenvalue $`(1-q)^n`$. These two quantities enter the concentration proof. The unknown input can be entangled: it is the **branch effect**, not the state or its observed reports, that factorizes. For adaptive measurements, fixing the reported branch fixes its chosen axes.
 
-This example also explains why noise alone does not imply a universal exponential cost. The target $\lvert0\rangle^{\otimes n}$ can already be distinguished from $I/2^n$ by repeatedly sampling one site. The theorem concerns typical targets in its specified ensembles. [The model](../science/model-and-results.md) and [uniform-concentration proof](../science/uniform-concentration.md) make those quantifiers explicit.
+This example also explains why noise alone does not imply a universal exponential cost. The target $`\lvert0\rangle^{\otimes n}`$ can already be distinguished from $`I/2^n`$ by repeatedly sampling one site. The theorem concerns typical targets in its specified ensembles. [The model](../science/model-and-results.md) and [uniform-concentration proof](../science/uniform-concentration.md) make those quantifiers explicit.
 
 ## How the experimental model changes the textbook question
 
-Theorem 3.4 of Watrous optimizes over unrestricted quantum measurements. For the clean pair $\psi$ and $I/d$, measuring $\{\psi,I-\psi\}$ accepts the target with certainty and accepts $I/d$ with probability $1/d$. The project instead limits each input qubit to one local projective measurement with one corrupted classical report. Target knowledge and arbitrary classical feedback remain available, but they do not implement the global projector.
+Theorem 3.4 of Watrous optimizes over unrestricted quantum measurements. For the clean pair $`\psi`$ and $`I/d`$, measuring $`\{\psi,I-\psi\}`$ accepts the target with certainty and accepts $`I/d`$ with probability $`1/d`$. The project instead limits each input qubit to one local projective measurement with one corrupted classical report. Target knowledge and arbitrary classical feedback remain available, but they do not implement the global projector.
 
 The same single-use report statistics arise if a qubit first undergoes
 
-$$
-\mathcal D_q=(1-2q)\operatorname{id}+2q\,\Omega,
+```math
+\mathcal D_q=(1-2q)\mathrm{id}+2q\,\Omega,
 \qquad
-\Omega(X)=\operatorname{tr}(X)\frac I2,
-$$
+\Omega(X)=\mathrm{tr}(X)\frac I2,
+```
 
-and is then measured ideally. Here $\Omega$ is the completely depolarizing channel from the book. The replacement weight is $2q$, although the detector bit-flip probability is $q$. This equality concerns the specified one-use measurement statistics. Repeated nondestructive reporting after a clean measurement, or encoding a report into fresh ancillas before detection, has different resources and does not reverse noise that already acted on the input state.
+and is then measured ideally. Here $`\Omega`$ is the completely depolarizing channel from the book. The replacement weight is $`2q`$, although the detector bit-flip probability is $`q`$. This equality concerns the specified one-use measurement statistics. Repeated nondestructive reporting after a clean measurement, or encoding a report into fresh ancillas before detection, has different resources and does not reverse noise that already acted on the input state.
 
 For the acquisition extension, each copy may undergo an arbitrary separable POVM across its sites; classical adaptation between copies is allowed. This extension does not assert a converse for joint quantum memories spanning copies. The [acquisition and control account](../science/acquisition-and-control.md) states and compares these experiments.
 
@@ -95,16 +95,16 @@ The book establishes the foundations; the following arguments are supplied in th
 | From Haar averages to a measurement chosen after seeing the target | A fixed-effect expectation is insufficient. A centered Gaussian moment estimate and a product net control all allowed effects on one common target event. | [Uniform concentration, §§2–4](../science/uniform-concentration.md) |
 | From local branch likelihoods to an adaptive copy lower bound | Complete transcript effects factor by input copy. Replacing one copy at a time produces normalized hybrid transcript laws and the exact KL identity, even when copies are interleaved. | [Binary sample law, §2](../science/binary-sample-law.md#2-a-transcript-identity-that-covers-arbitrary-interleaving) |
 | From a converse to the optimal binary exponential rate | Exact fixed-basis second and fourth moments, followed by a Hellinger/likelihood argument, supply the matching upper rate. The polynomial prefactors need not match. | [Binary sample law, §§3–5](../science/binary-sample-law.md) |
-| From the binary promise to fidelity certification | A verifier gap and bounded local score are needed. Classical inversion of the detector channel supplies sufficiency; the mixed alternative supplies necessity. Robust completeness requires a positive gap $G=\gamma\varepsilon_{\mathrm b}-\varepsilon_{\mathrm g}$. | [Fidelity certification](../science/fidelity-certification.md) |
+| From the binary promise to fidelity certification | A verifier gap and bounded local score are needed. Classical inversion of the detector channel supplies sufficiency; the mixed alternative supplies necessity. Robust completeness requires a positive gap $`G=\gamma\varepsilon_{\mathrm b}-\varepsilon_{\mathrm g}`$. | [Fidelity certification](../science/fidelity-certification.md) |
 | From Haar targets to finite circuit descriptions | High moments must survive the stated approximation norm. The proof tracks moment order, exponentially small design error, circuit length and gate precision. This transfers the binary theorem, not automatically the full-fidelity verifier gap. | [Circuit targets](../science/circuit-targets.md) |
 | From product effects to alternative control architectures | Normalize and convexly combine separable effects; construct the global typical-error-span test; charge extra reports, ancillas and coherent gates explicitly. | [Acquisition and control](../science/acquisition-and-control.md) |
 
-One central step is worth keeping visible. Let $\delta_n$ bound the deviation of every normalized one-copy branch likelihood from one on the common target event. For the full transcript laws $P$ (all target copies), $Q$ (all mixed copies), and $P^{(i)}$ (only copy $i$ replaced by the mixed state), the branch factorization gives
+One central step is worth keeping visible. Let $`\delta_n`$ bound the deviation of every normalized one-copy branch likelihood from one on the common target event. For the full transcript laws $`P`$ (all target copies), $`Q`$ (all mixed copies), and $`P^{(i)}`$ (only copy $`i`$ replaced by the mixed state), the branch factorization gives
 
-$$
+```math
 D(P\|Q)=\sum_{i=1}^{N}D(P\|P^{(i)})
 \leq N\delta_n^2.
-$$
+```
 
 This is not an assumption that the adaptive records are independent. Each hybrid is the law of the same protocol with one different physical input; its normalization is essential. The [proof](../science/binary-sample-law.md#lemma-2-hybrid-relative-entropy-identity) supplies that justification.
 

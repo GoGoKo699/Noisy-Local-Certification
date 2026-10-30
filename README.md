@@ -4,12 +4,12 @@
 
 For a Haar-typical pure target, fixed nonzero detector error makes even target-versus-maximally-mixed discrimination exponentially expensive. Knowing the target, choosing every measurement basis around it, using classical feedback across interleaved copies, and performing unlimited classical computation do not remove this cost.
 
-If each independently reported bit flips with probability $0<q<1/2$, the optimal binary copy count at fixed error has rate
+If each independently reported bit flips with probability $`0\lt q\lt 1/2`$, the optimal binary copy count at fixed error has rate
 
-$$
+```math
 N_{\mathrm{opt}}
 =\bigl[(1-q)^2+q^2\bigr]^{-n+o(n)}.
-$$
+```
 
 The acquisition model permits one destructive local projective measurement per input qubit. All accessed copies count. Repeated nondestructive readout, ancilla redundancy and coherent processing are additional resources, treated explicitly in the scientific account.
 
@@ -19,7 +19,7 @@ The acquisition model permits one destructive local projective measurement per i
 |---|---|
 | Can target knowledge and adaptive local bases avoid the binary cost? | A simultaneous product-effect bound and a complete-transcript hybrid argument give a converse for every allowed strategy, including interleaved copies. |
 | Is the exponential rate attainable? | A fixed computational basis and a classical likelihood test attain it. The upper bound concerns sample complexity; classical computation can be exponential. |
-| When can full fidelity certification use polynomially many copies? | For generic targets, exact-target certification at fixed tolerances has the noise budget $nq_n=O(\log n)$. Robust completeness has an explicit verifier-gap condition. |
+| When can full fidelity certification use polynomially many copies? | For generic targets, exact-target certification at fixed tolerances has the noise budget $`nq_n=O(\log n)`$. Robust completeness has an explicit verifier-gap condition. |
 | Does the binary theorem require an exponentially long preparation circuit? | A quantitative approximate-design transfer supplies polynomial-size circuit ensembles. This does not imply shallow circuits or efficient classical likelihood evaluation. |
 | What changes if more quantum control is available? | Local redundancy, supplied inverse preparation and global acquisition measurements provide distinct, resource-accounted comparisons. |
 

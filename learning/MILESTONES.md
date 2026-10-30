@@ -38,7 +38,7 @@ All source pointers distinguish textbook foundations from the canonical project 
 ### M03 — A binary symmetric detector channel
 
 - **Central question:** How does an independently flipped report change a measurement effect?
-- **Understanding target:** Derive the reported effect as the weighted sum of the two ideal projectors and interpret the contraction parameter $s=1-2q$. Separate a hidden ideal outcome from the corrupted outcome actually available for feedback.
+- **Understanding target:** Derive the reported effect as the weighted sum of the two ideal projectors and interpret the contraction parameter $`s=1-2q`$. Separate a hidden ideal outcome from the corrupted outcome actually available for feedback.
 - **Dependencies and story role:** Uses M02. Adds noise to the single-site experiment before considering many sites.
 - **Conceptual connection:** Classical postprocessing acts on quantum effects through linearity; its uncertainty can be represented without pretending the true outcome is observed.
 - **Source pointers:** Watrous [§§2.2.1, 2.3.1][W2]; project [model §2](../science/model-and-results.md#2-the-quantities-controlling-the-record) and [acquisition §1](../science/acquisition-and-control.md#1-two-explicitly-located-noise-models).
@@ -54,7 +54,7 @@ All source pointers distinguish textbook foundations from the canonical project 
 ### M05 — The two spectral scales of a noisy effect
 
 - **Central question:** Which properties of a noisy product effect control its fluctuations over targets?
-- **Understanding target:** Interpret trace normalization, purity and largest eigenvalue. Relate the local eigenvalues $1-q$ and $q$ to the product scales $b^n$ and $a^n$, where $a=1-q$ and $b=(1-q)^2+q^2$.
+- **Understanding target:** Interpret trace normalization, purity and largest eigenvalue. Relate the local eigenvalues $`1-q`$ and $`q`$ to the product scales $`b^n`$ and $`a^n`$, where $`a=1-q`$ and $`b=(1-q)^2+q^2`$.
 - **Dependencies and story role:** Uses M03–M04. Identifies the quantitative objects that the concentration proof must retain.
 - **Conceptual connection:** The Hilbert–Schmidt scale measures aggregate spectral weight, while the operator norm controls the largest contribution. They enter different terms of the finite-size bound.
 - **Source pointers:** Watrous [§1.1.3][W1]; project [uniform Corollary 3](../science/uniform-concentration.md#corollary-3-moments-for-one-noisy-product-effect) and [model §2](../science/model-and-results.md#2-the-quantities-controlling-the-record).
@@ -136,7 +136,7 @@ All source pointers distinguish textbook foundations from the canonical project 
 ### M15 — Unread sites, partial records and convexity
 
 - **Central question:** Why does the same event control a branch that stops before every qubit is measured?
-- **Understanding target:** Normalize a partial-record effect by its trace, recognize an unread site as an identity factor becoming $I/2$, and express interior Bloch vectors as convex mixtures. Explain why the likelihood bound survives these mixtures without a new probability event.
+- **Understanding target:** Normalize a partial-record effect by its trace, recognize an unread site as an identity factor becoming $`I/2`$, and express interior Bloch vectors as convex mixtures. Explain why the likelihood bound survives these mixtures without a new probability event.
 - **Dependencies and story role:** Uses M04 and M14. Extends the uniform theorem to the effects actually needed by stopping and later measurement-class comparisons.
 - **Conceptual connection:** Trace normalization removes the trivial probability scale of a branch; convexity preserves its deviation bound even when a site contains less information.
 - **Source pointers:** Watrous [§1.2.1][W1] and [§2.3.1][W2]; project [uniform §§3–4](../science/uniform-concentration.md#4-partial-measurement-records).
@@ -152,7 +152,7 @@ All source pointers distinguish textbook foundations from the canonical project 
 ### M17 — Normalized hybrids and relative-entropy accumulation
 
 - **Central question:** How can one charge statistical information once per copy despite arbitrary interleaving?
-- **Understanding target:** Construct the physical hybrid run that replaces only copy $i$ by the maximally mixed state while leaving the same protocol in place. Explain the likelihood-product identity and why the resulting relative entropies sum exactly and are bounded by $N\delta_n^2$.
+- **Understanding target:** Construct the physical hybrid run that replaces only copy $`i`$ by the maximally mixed state while leaving the same protocol in place. Explain the likelihood-product identity and why the resulting relative entropies sum exactly and are bounded by $`N\delta_n^2`$.
 - **Dependencies and story role:** Uses M08 and M16. Supplies the central adaptive information bound.
 - **Conceptual connection:** Each hybrid is a normalized probability law, so its likelihood has mean one. That fact turns uniform branch closeness into a quadratic information bound with no extra penalty for interleaving.
 - **Source pointers:** Watrous [§§5.1.1–5.1.2][W5]; project [binary Lemma 2](../science/binary-sample-law.md#lemma-2-hybrid-relative-entropy-identity).
@@ -168,7 +168,7 @@ All source pointers distinguish textbook foundations from the canonical project 
 ### M19 — The signal left in a fixed basis
 
 - **Central question:** What usable information survives when every copy is measured in the same computational basis?
-- **Understanding target:** Explain the noisy probability distribution as a bit-flip convolution and express its correlations using parity characters. Understand why a correlation on a subset of sites is attenuated by a power of $s$, and why the squared residual correlations sum to chi-square divergence from uniform.
+- **Understanding target:** Explain the noisy probability distribution as a bit-flip convolution and express its correlations using parity characters. Understand why a correlation on a subset of sites is attenuated by a power of $`s`$, and why the squared residual correlations sum to chi-square divergence from uniform.
 - **Dependencies and story role:** Uses M03, M04 and M08. Starts the achievable-test branch with a concrete permitted measurement.
 - **Conceptual connection:** The same detector contraction that smooths every local effect also determines the remaining classical signal in a simple fixed measurement.
 - **Source pointers:** Watrous [§1.1.2][W1] and [§2.3.1][W2] for the operator framework; project [binary §3, through Eq. (16)](../science/binary-sample-law.md#3-fixed-basis-statistics-and-exact-haar-moments) for the parity calculation.
@@ -176,7 +176,7 @@ All source pointers distinguish textbook foundations from the canonical project 
 ### M20 — From an average collision scale to typical signal
 
 - **Central question:** Why does a typical target retain enough fixed-basis signal, rather than merely a nonzero ensemble average?
-- **Understanding target:** Identify the roles of the second and fourth Haar moments in the exact mean and variance of chi-square divergence. Explain how, at fixed $0<q<1/2$, the relative-variance bound shows that the signal has scale $b^n$ with high target probability.
+- **Understanding target:** Identify the roles of the second and fourth Haar moments in the exact mean and variance of chi-square divergence. Explain how, at fixed $`0\lt q\lt 1/2`$, the relative-variance bound shows that the signal has scale $`b^n`$ with high target probability.
 - **Dependencies and story role:** Uses M10 and M19. Establishes the typical lower bound on signal needed for achievability.
 - **Conceptual connection:** An average signal alone could be dominated by rare targets. The fourth-moment calculation controls that possibility and complements the uniform upper control on individual likelihood deviations.
 - **Source pointers:** Watrous [§§7.1.1, 7.2.1, Lemma 7.24][W7]; project [binary Lemma 4 and its consequences](../science/binary-sample-law.md#3-fixed-basis-statistics-and-exact-haar-moments), with [collision-scale attribution](../references/RELATED_WORK.md#2-fixed-noisy-measurements-already-exhibit-the-same-collision-scale).
@@ -192,7 +192,7 @@ All source pointers distinguish textbook foundations from the canonical project 
 ### M22 — The optimal binary exponential rate
 
 - **Central question:** What exactly matches when the converse and the fixed-basis test are combined?
-- **Understanding target:** Derive the rate $-\log b$ at fixed $0<q<1/2$ from the two bounds on their common typical-target event. Distinguish the matched exponential rate from the unmatched polynomial prefactor, and explain why the noiseless and fully random-report endpoints require separate statements.
+- **Understanding target:** Derive the rate $`-\log b`$ at fixed $`0\lt q\lt 1/2`$ from the two bounds on their common typical-target event. Distinguish the matched exponential rate from the unmatched polynomial prefactor, and explain why the noiseless and fully random-report endpoints require separate statements.
 - **Dependencies and story role:** Integrates M13–M21 around the binary task specified in M12.
 - **Conceptual connection:** A highly adaptive strategy and a fixed basis have the same leading exponential copy cost in this model. This conclusion is limited to the binary promise and does not identify a full-fidelity exponent.
 - **Source pointers:** Watrous [§3.1.1][W3] and [§7.2.1][W7]; project [binary Theorem 7](../science/binary-sample-law.md#theorem-7-binary-sample-law) and [§6](../science/binary-sample-law.md#6-endpoints-and-certification-scope).
@@ -216,7 +216,7 @@ All source pointers distinguish textbook foundations from the canonical project 
 ### M25 — The polynomial-copy fidelity threshold
 
 - **Central question:** How accurately must each detector report be acquired as the number of qubits grows?
-- **Understanding target:** Embed the maximally mixed state in the bad-fidelity set and combine that necessity with the corrected-score construction. Interpret the criterion $nq_n=O(\log n)$, its robust gap-dependent promise, and the distinction between a divergent noise-budget ratio and an unbounded oscillating ratio.
+- **Understanding target:** Embed the maximally mixed state in the bad-fidelity set and combine that necessity with the corrected-score construction. Interpret the criterion $`nq_n=O(\log n)`$, its robust gap-dependent promise, and the distinction between a divergent noise-budget ratio and an unbounded oscillating ratio.
 - **Dependencies and story role:** Uses M18 and M24. Integrates the fidelity branch while keeping it separate from binary achievability.
 - **Conceptual connection:** Different lower and upper exponential factors can still determine the same polynomial-versus-superpolynomial threshold. They do not establish an optimal fixed-noise exponent for composite certification.
 - **Source pointers:** Watrous [§§3.1.1, 3.2][W3] for task foundations; project [fidelity §§6–8](../science/fidelity-certification.md#6-necessity-from-the-target-informed-binary-converse).
