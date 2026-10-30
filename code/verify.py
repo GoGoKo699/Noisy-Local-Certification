@@ -45,7 +45,11 @@ def navigation_check():
 def input_hashes():
     paths = list((ROOT / "code").glob("*.py"))
     paths += list(ROOT.rglob("*.md"))
-    paths += [ROOT / "requirements.txt"]
+    paths += [ROOT / "requirements.txt", ROOT / "llms.txt"]
+    paths += list((ROOT / "verification").rglob("*.py"))
+    paths += list((ROOT / "verification").rglob("*.cjs"))
+    paths += list((ROOT / "verification").glob("*.json"))
+    paths += list((ROOT / ".github" / "workflows").glob("*.yml"))
     return {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in sorted(paths) if ".git" not in path.parts}
 

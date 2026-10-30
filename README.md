@@ -29,6 +29,10 @@ Ideal local constant-copy certification and fixed-measurement noise suppression 
 
 Start with [the experiment, assumptions and theorem map](science/model-and-results.md). The [science index](science/README.md) connects the complete proofs, fidelity threshold, circuit-design extension and acquisition/control comparisons. The [reference list](references/REFERENCES.md) gives source versions and theorem locations.
 
+## Learn the mechanism
+
+The [conceptual introduction](learning/README.md) starts with one imperfect measurement bit and builds toward the many-qubit sample law. Follow the shared [30-milestone map](learning/MILESTONES.md), with 12 foundation milestones and 18 developing the contribution. John Watrous's *The Theory of Quantum Information* (2018) is the single educational anchor; the [source bridge](learning/WATROUS_BRIDGE.md) identifies selected readings, translates notation and connects them to the project-specific arguments.
+
 ## Reproduce the finite checks
 
 With Python 3.12 and the pinned dependency installed:
@@ -38,7 +42,7 @@ python -m pip install -r requirements.txt
 python code/verify.py
 ```
 
-The [reproduction guide](code/README.md) explains the checks and the saved numerical report. They compare independently evaluated physical instruments, likelihood identities, Haar moments and the noise-inverted fidelity score. Universal probability and asymptotic claims are proved analytically.
+The [verification guide](verification/README.md) gives the finite checks, expected outputs and hosted-rendering procedure. The [implementation guide](code/README.md) explains the independent physical instruments, likelihood identities, Haar moments and noise-inverted fidelity score behind the saved numerical report. Universal probability and asymptotic claims are proved analytically.
 
 ## Purpose and contact
 

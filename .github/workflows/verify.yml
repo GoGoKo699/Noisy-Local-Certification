@@ -1,0 +1,97 @@
+name: Verify science and hosted mathematics
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  SOURCE_REVISION: ${{ github.event.pull_request.head.sha || github.sha }}
+
+jobs:
+  finite:
+    name: Finite scientific checks
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the exact source revision
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ env.SOURCE_REVISION }}
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.12'
+      - name: Verify checkout identity
+        shell: bash
+        run: test "$(git rev-parse HEAD)" = "$SOURCE_REVISION"
+      - name: Install scientific dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Run finite checks
+        run: python code/verify.py --output "$RUNNER_TEMP/finite-verification/verification.json"
+      - name: Preserve finite-check report
+        if: ${{ always() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: finite-verification-${{ env.SOURCE_REVISION }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/finite-verification/
+          retention-days: 14
+          if-no-files-found: warn
+
+  hosted:
+    name: Hosted mathematics at both viewports
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      NODE_PATH: ${{ runner.temp }}/hosted-deps/node_modules
+      PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/playwright-browsers
+    steps:
+      - name: Check out the exact source revision
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ env.SOURCE_REVISION }}
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.12'
+      - name: Set up Node
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Verify checkout identity
+        shell: bash
+        run: test "$(git rev-parse HEAD)" = "$SOURCE_REVISION"
+      - name: Install rendering dependencies outside the checkout
+        shell: bash
+        run: |
+          npm install --prefix "$RUNNER_TEMP/hosted-deps" --no-save --no-package-lock --ignore-scripts --no-audit --no-fund playwright@1.56.1 mathjax-full@3.2.1
+          "$RUNNER_TEMP/hosted-deps/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Inspect every tracked Markdown page on GitHub
+        shell: bash
+        env:
+          SOURCE_REPOSITORY: ${{ github.repository }}
+        run: |
+          node verification/hosted/capture_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE" \
+            --repository "$SOURCE_REPOSITORY" \
+            --revision "$SOURCE_REVISION" \
+            --output "$RUNNER_TEMP/hosted-verification" \
+            --contract verification/math-contract.json \
+            --python python
+      - name: Preserve hosted reports, HTML, and screenshots
+        if: ${{ always() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: hosted-verification-${{ env.SOURCE_REVISION }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/hosted-verification/
+          retention-days: 14
+          if-no-files-found: warn

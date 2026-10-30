@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-30T14:56:43.335258+00:00",
+  "checked_at_utc": "2026-10-30T15:22:16.002823+00:00",
   "environment": {
     "python": "3.12.14",
     "numpy": "2.3.5"
@@ -359,11 +359,16 @@
     }
   },
   "input_sha256": {
-    "README.md": "21a38d43845defc0664bd95e42782eb85228d359a036a7a53ae7d02321b42a98",
+    ".github/workflows/verify.yml": "8ec963c04ae3bc2b1e9ae0ef63a20af25a7fd1a69d88acedda0ad8b1318e68bc",
+    "README.md": "e60d83b227821626e91e6109bf84dbd374299b6d8700d3cce9e13c2e2d3d4663",
     "code/README.md": "0314042ab355d821384a096ad2ad3bf47ba508d197b7471378f1db8551d85d67",
     "code/core_checks.py": "1bec643e4d08448f1840779bde2c5e5d56970e70aede7d2dd7c4b57fabf5640f",
     "code/fidelity_checks.py": "2e257427ab40e9776ae53a08fab0b3bd280329ae0b8ff0ee2bdd9369d144cdbc",
-    "code/verify.py": "c4de71801b87b42789ccbf4b8733e9975fd90ec2f7880033171ca7b7df1ab275",
+    "code/verify.py": "ac47d3aa0912dfe5de00d8f9285f14076d51f8ee2c71ea27f1d2478a568fd5d0",
+    "learning/MILESTONES.md": "7e63888e03699b7f6600aee5bee4ff5c1325c0287f86e3479b7ba56e5d61c5ce",
+    "learning/README.md": "6e04e89eb229b19a851b553ba1ae56b7ed6fa3fce4a1541e60383795e27c50b2",
+    "learning/WATROUS_BRIDGE.md": "8787509179c3d85fbb86d743e20c4ad4ae2e1898e0576e32e5f7b8197232c35d",
+    "llms.txt": "9e4d909b722128c5c104dd4e46f21ff13b8b6c8359b8b1f649ea99a2e0f575fb",
     "references/REFERENCES.md": "0944055cbfa5bd20f1b6ad8cc70a0e172f667897f01708fcbdf6822edebe05e1",
     "references/RELATED_WORK.md": "90029fdc405ddfa9d89ec93bb9193b070d9b59eafaf4a3e570674947ab8a7e8c",
     "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
@@ -373,13 +378,17 @@
     "science/circuit-targets.md": "93e3e0d6052ef2249a9f27b77bb2652b664601a52fbaf5adedc2a7e9dc4cf93d",
     "science/fidelity-certification.md": "185d7bef2e2e6a13c53778aa999071b91621a75052b6b94b8f4d1f0c87ae7ed2",
     "science/model-and-results.md": "323c7ba3753cf1a5cea59ab9f33150e2dc0020c24565770ba771815b45e93a37",
-    "science/uniform-concentration.md": "feef93775b4c43b77b3ca384b84021e5566a516cc334990e3ce7baf879eccf31"
+    "science/uniform-concentration.md": "feef93775b4c43b77b3ca384b84021e5566a516cc334990e3ce7baf879eccf31",
+    "verification/README.md": "16d7a59335ffbe4e59984c5d90e347e2890d0c485a33b4d07513a774b775ccd9",
+    "verification/hosted/capture_hosted_math.cjs": "49182eaf354e86f685a4976814d672de5d7329a2d9e42f62a5227e2bc07c2d18",
+    "verification/hosted/check_rendered_math.py": "edbc2d72af94e96b78166d74b66fcea150134f2f3ebaaea121e9057768e1dbfe",
+    "verification/math-contract.json": "e07d3ff507b873c2465f1df4bf079bf9ffe46d3ece66b39d593828ad9f5c2d29"
   },
   "scope": "Finite formula, instrument and score checks. Analytical proofs establish the asymptotic claims.",
   "status": "pass",
   "navigation": {
     "status": "pass",
-    "relative_file_links_checked": 60,
+    "relative_file_links_checked": 163,
     "scope": "Relative file destinations; hosted anchor rendering is reviewed separately."
   }
 }
