@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-30T15:22:16.002823+00:00",
+  "checked_at_utc": "2026-10-30T15:26:55.713049+00:00",
   "environment": {
     "python": "3.12.14",
     "numpy": "2.3.5"
@@ -359,7 +359,7 @@
     }
   },
   "input_sha256": {
-    ".github/workflows/verify.yml": "8ec963c04ae3bc2b1e9ae0ef63a20af25a7fd1a69d88acedda0ad8b1318e68bc",
+    ".github/workflows/verify.yml": "9b772651d3d4bd96e7da22d764c419efbde8d643c563061618b9b9272e407b0b",
     "README.md": "e60d83b227821626e91e6109bf84dbd374299b6d8700d3cce9e13c2e2d3d4663",
     "code/README.md": "0314042ab355d821384a096ad2ad3bf47ba508d197b7471378f1db8551d85d67",
     "code/core_checks.py": "1bec643e4d08448f1840779bde2c5e5d56970e70aede7d2dd7c4b57fabf5640f",
