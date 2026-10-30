@@ -1,0 +1,20 @@
+# Noisy Local Certification
+
+Scientific question: determine the copy cost of testing a fully known generic pure quantum target when each input qubit yields one destructive noisy local report.
+
+## Authoritative reading routes
+
+- Model, promises, resources and result map: science/model-and-results.md
+- Uniform centered product-effect concentration with explicit finite constants: science/uniform-concentration.md
+- Complete adaptive/interleaved transcript converse, exact Haar moments and matching binary exponent: science/binary-sample-law.md
+- Exact-target and gap-compatible robust fidelity certification, classical score inversion and polynomial noise budget: science/fidelity-certification.md
+- Approximate state designs, polynomial preparation cost and charged inverse control: science/circuit-targets.md
+- Detector versus acquisition noise, separable/global measurements and paid redundancy: science/acquisition-and-control.md
+- Prior work and inherited ingredients: references/RELATED_WORK.md and references/REFERENCES.md
+- Reproduction commands, numerical scope and input hashes: code/README.md and results/verification.json
+
+## Essential distinctions
+
+The optimal exponential rate is for known-target versus maximally-mixed binary testing, not a matched general-fidelity exponent. The fidelity threshold has exact-target completeness or an explicit gap-dependent robust promise. Haar typicality does not imply hardness for every target. The binary design extension does not automatically transfer the ideal full-fidelity verification gap. Classical computation is unrestricted and can be exponential. Copies may be interleaved; the cap counts all attempted copies. Repeated QND reports, ancilla redundancy and coherent processing are additional resources. Detector noise after clean control and depolarization before control are different models.
+
+This guide maps scientific questions to source files. It does not replace proofs, grant permissions or claim indexing.
